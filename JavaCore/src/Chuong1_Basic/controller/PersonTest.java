@@ -1,6 +1,7 @@
 package Chuong1_Basic.controller;
 
-import main.model.Person;
+
+import Chuong1_Basic.model.Person;
 
 public class PersonTest {
     public static void main(String[] args) {

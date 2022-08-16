@@ -8,7 +8,7 @@ import java.util.stream.Collector;
 
 public class ConcurrencyTest {
     public static void main(String[] args) {
-        example3();
+        example2();
     }
 
     private static void example3() {
@@ -42,7 +42,7 @@ public class ConcurrencyTest {
 
     private static void example1() {
         List<Integer>  list = new ArrayList<>();
-        Collections.addAll(list,new Integer[]{1,3,4,2,3,6,3,3,8});
+        Collections.addAll(list,new Integer[]{1,3,4,2,3,6,3,3,8,9,3,3});
 
         System.out.println("Before remove: size of list =" + list.size());
         for (int i = 0; i < list.size(); i++) {
