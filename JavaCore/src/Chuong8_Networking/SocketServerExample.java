@@ -5,23 +5,25 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class SocketServerExample {
 
-    public SocketServerExample(int serverPort) throws IOException{
+    public SocketServerExample(int serverPort) throws IOException {
         ServerSocket serverSocket = new ServerSocket(serverPort);
         System.out.println("SERVER Listening ...");
-        while (true){
-            Socket socket = serverSocket.accept();
-            new Thread(() -> {
-                try (DataInputStream input = new DataInputStream(socket.getInputStream());
-                     DataOutputStream output = (DataOutputStream) socket.getOutputStream()){
-                    System.out.println("Client Say: " + input.readUTF());
-                    output.writeUTF("I'm a socket server!");
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }).start();
+        Socket socket = serverSocket.accept();
+        try (DataInputStream input = new DataInputStream(socket.getInputStream());
+             DataOutputStream output = new DataOutputStream(socket.getOutputStream())) {
+
+            while (true) {
+                System.out.println("Client Say: " + input.readUTF());
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Server sending: ");
+                String message = sc.nextLine();
+                output.writeUTF(message);
+                System.out.println();
+            }
         }
     }
 
