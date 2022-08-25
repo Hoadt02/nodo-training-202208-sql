@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd"
+       default-destroy-method="release">
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz" init-method="initMessage">-->
+<!--&lt;!&ndash;    <property name="message" value="Welcome to Java Clazz"></property>&ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz" scope="prototype">-->
+<!--            <property name="message" value="Welcome to Java Clazz"></property>-->
+<!--    </bean>-->
+
+<!--        <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--            <property name="message" value="Welcome to Java Clazz"></property>-->
+<!--        </bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz" init-method="initMessage">-->
+<!--        <property name="message" value="Welcome to Java Clazz"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz" destroy-method="release">-->
+<!--        <property name="message" value="Welcome to Java Clazz"></property>-->
+<!--    </bean>-->
+
+<!--        <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--            <property name="message" value="Welcome to Java Clazz"></property>-->
+<!--        </bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz" init-method="initMessage">-->
+<!--        <constructor-arg type="int" value="5"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloJavaClazz2" class="core.model.HelloClazz" init-method="initMessage">-->
+<!--        <constructor-arg ref="helloJavaClazz"/>-->
+<!--    </bean>-->
+
+<!--    <bean class="core.controller.InitSampleBean"/>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld"></bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--        <property name="message" value="Hello Sub Bean!"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld" parent="helloJavaClazz"/>-->
+
+<!--    <bean id="sampleTemplate" abstract="true">-->
+<!--        <property name="message" value="Template say Hello!"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld">-->
+<!--        <constructor-arg index="0" value="Thuan"/>-->
+<!--        <constructor-arg ref="helloJavaClazz"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--        <property name="message" value="Hello Bean Inheritance!"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld">-->
+<!--        <property name="clazz">-->
+<!--            <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--                <property name="message" value="Hello Class Instance is Inner Bean!"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="jee01" class="core.model.JavaClazz">-->
+<!--        <property name="students">-->
+<!--            <map>-->
+<!--                <entry key="Nguyen Van A" value="23"/>-->
+<!--                <entry key="Tran Thi B" value="18"/>-->
+<!--                <entry key="Le Thi C" value="27"/>-->
+<!--                <entry key="Hoang Van D" value="34"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--        <property name="clazzes">-->
+<!--            <list>-->
+<!--                <ref bean="jee01"/>-->
+<!--                <ref bean="jee01"/>-->
+<!--                <ref bean="jee01"/>-->
+<!--                <null/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld" autowire="byName"></bean>-->
+
+<!--    <bean id="clazz" class="core.model.HelloClazz">-->
+<!--    </bean>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld" autowire="byType">-->
+<!--        <property name="message" value="Hello Annotation based Configuration!"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="helloWorld" class="core.model.HelloWorld" autowire="byType">-->
+<!--        <property name="message" value="Hello Annotation based Configuration!"/>-->
+<!--    </bean>-->
+
+<!--        <bean id="helloJavaClazz" class="core.model.HelloClazz">-->
+<!--            <property name="message" value="Hello Bean Inheritance!"/>-->
+<!--        </bean>-->
+
+<!--            <bean id="helloJavaClazz2" class="core.model.HelloClazz">-->
+<!--                <property name="message" value="Hello Bean Inheritance!"/>-->
+<!--            </bean>-->
+
+    <bean id="startEventHandler" class="core.controller.ContextStartEventHandler"/>
+
+</beans>
