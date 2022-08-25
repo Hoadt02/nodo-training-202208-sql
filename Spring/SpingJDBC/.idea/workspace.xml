@@ -5,54 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0085cdd-a713-4c7d-9024-66499d56a084" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/java/spring/DAO/StudentJdbcDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/java/spring/controller/JdbcApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/java/spring/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/SpringCore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/controller/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/controller/App2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/controller/App3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/controller/ContextStartEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/controller/InitSampleBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/model/HelloClazz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/model/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/java/core/model/JavaClazz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/config/AppConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/controller/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/controller/App2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/controller/App3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/controller/ContextStartEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/controller/InitSampleBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/model/HelloClazz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/model/HelloWorld.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/core/model/JavaClazz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/java/spring/DAO/StudentJdbcDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/java/spring/DAO/StudentJdbcDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +75,7 @@
       <updated>1661336829485</updated>
       <workItem from="1661336830792" duration="1446000" />
       <workItem from="1661351340986" duration="1126000" />
-      <workItem from="1661391624013" duration="11074000" />
+      <workItem from="1661391624013" duration="11931000" />
     </task>
     <servers />
   </component>

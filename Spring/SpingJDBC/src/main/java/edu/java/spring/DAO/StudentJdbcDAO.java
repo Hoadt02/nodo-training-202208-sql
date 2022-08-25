@@ -3,7 +3,6 @@ package edu.java.spring.DAO;
 import edu.java.spring.model.Student;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -94,7 +93,7 @@ public class StudentJdbcDAO {
                 student.setAge(rs.getInt("age"));
                 return student;
             } catch (Exception e) {
-                LOGGER.error(e, e);
+                LOGGER.error(e,e);
                 return null;
             }
         }
