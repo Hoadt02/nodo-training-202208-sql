@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Optional;
 
@@ -99,7 +100,8 @@ public class StudentController {
         String realPath = servletContext.getRealPath("/");
         File folder = new File(realPath + File.separator + "avatar");
         if (!folder.exists()) folder.mkdirs();
-        return Path.of(String.valueOf(folder), String.valueOf(id) + ".jpg");
+
+        return Paths.get(folder.getAbsolutePath() + File.separator + id + ".jpg");
     }
 
     @RequestMapping(value = "/avatar/{id}", method = RequestMethod.GET)
