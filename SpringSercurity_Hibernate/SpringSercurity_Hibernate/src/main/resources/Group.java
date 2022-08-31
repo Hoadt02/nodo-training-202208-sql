@@ -3,8 +3,6 @@ package edu.hanoi.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
-import edu.hanoi.model.User;
 
 @javax.persistence.Entity
 @Table(name="HN_GROUP",
@@ -18,8 +16,4 @@ public class Group {
 
     @Column(name="name", nullable = false, length = 100)
     private String name;
-
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinColumn(name="group_id")
-    private List<User> users;
 }

@@ -30,13 +30,7 @@
                 </tr>
                 <c:forEach items="${groups}" var="item" varStatus="loop">
                     <tr>
-                        <td><a href="/tai-khoan/danh-sach?group=${item.id}">${item.name}</a>
-                            <ul>
-                                <c:forEach items="${item.users}" var="user" varStatus="loop">
-                                    <li>${user.username} - ${user.age}</li>
-                                </c:forEach>
-                            </ul>
-                        </td>
+                        <td>${item.name}</td>
                         <td><a href="/nhom/xoa/${item.id}">Delete</a></td>
                         <td><a href="/nhom/sua?id=${item.id}">Update</a></td>
                     </tr>
