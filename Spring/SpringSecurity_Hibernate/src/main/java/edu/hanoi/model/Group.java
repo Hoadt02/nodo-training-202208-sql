@@ -4,8 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
-import edu.hanoi.model.User;
 
+@SuppressWarnings("ALL")
 @javax.persistence.Entity
 @Table(name="HN_GROUP",
         uniqueConstraints = {@UniqueConstraint(columnNames = "id")})
@@ -22,4 +22,5 @@ public class Group {
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name="group_id")
     private List<User> users;
+
 }

@@ -17,23 +17,22 @@
    <tiles:insertDefinition name="template">
        <tiles:putAttribute name="body">
            <h1>Add User</h1>
-           <form:form method="post" action="/tai-khoan/luu">
+           <form:form method="post" action="/tai-khoan/luu" modelAttribute="command">
                <p>
-                   Name: <form:input type="text" path="username" name="username" />
+                   Name: <form:input type="text" path="username"/>
                </p>
                <p>
-                   Password: <form:input path="password" type="password" name="password"/>
+                   Password: <form:input path="password" type="password"/>
                </p>
                <p>
-                   Email: <form:input path="email" type="email" name="password"/>
+                   Email: <form:input path="email" type="email"/>
                </p>
                <p>
-                   Age: <form:input path="age" type="number" name="password"/>
+                   Age: <form:input path="age" type="number" />
                </p>
                <p>
                    Group:
-                   <form:select path="group" name="group" id="group">
-                       <form:options items="${groups}"></form:options>
+                   <form:select path="group" items="${groups}">
                    </form:select>
                </p>
                <p class="submit">

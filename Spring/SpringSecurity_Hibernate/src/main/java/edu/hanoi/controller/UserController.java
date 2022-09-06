@@ -47,9 +47,6 @@ public class UserController {
             mv.addObject("groups",toGroupMap(groupDAO.list(null)));
             return mv;
         }
-        System.out.println(user.getUsername());
-//        Group group = groupDAO.get(groupId);
-//        user.setGroup(group);
         userDAO.insert(user);
         LOGGER.info("add new user ------> "+ user);
         return new ModelAndView("redirect:/tai-khoan/danh-sach");
@@ -67,5 +64,11 @@ public class UserController {
         ModelAndView mv = new ModelAndView("user/detail");
         mv.addObject("user", userDAO.get(username));
         return mv;
+    }
+
+    @GetMapping("/xoa/{name}")
+    public String delete(@PathVariable("name") String name){
+        userDAO.delete(name);
+        return "redirect:/tai-khoan/danh-sach";
     }
 }

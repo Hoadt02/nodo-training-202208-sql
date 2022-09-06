@@ -32,6 +32,7 @@
                         <td>${item.email}</td>
                         <td>${item.age}</td>
                         <td>${item.group}</td>
+                        <td><a href="/tai-khoan/xoa/${item.username}">Delete</a></td>
                     </tr>
                 </c:forEach>
             </table>

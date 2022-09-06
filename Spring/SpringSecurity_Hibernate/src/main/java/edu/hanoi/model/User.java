@@ -1,6 +1,6 @@
 package edu.hanoi.model;
 
-public class User implements Comparable<User>{
+public class User{
     private String username;
     private String password;
     private String email;
@@ -47,8 +47,14 @@ public class User implements Comparable<User>{
         this.group = group;
     }
 
-    @Override
-    public int compareTo(User o) {
-        return age - o.age;
+    public User(String username, String password, String email, Integer age, Group group) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.age = age;
+        this.group = group;
+    }
+
+    public User() {
     }
 }
