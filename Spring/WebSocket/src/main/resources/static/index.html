@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HN Spring WebSocket</title>
+    <script type="text/javascript">
+        var stomClient = null;
+
+        function disconnect() {
+            if (stomClient != null) stomClient.disconnect();
+            console.log("Disconnected stomp client...");
+            enableChatbox(false);
+        }
+
+        function connect(){
+            var socket = new SockJS('message');
+            stomClient = Stomp.over(socket);
+            stomClient.connect({}, function (frame){
+                console.log('Connected: ' + frame);
+            });
+            setTimeout(function () {
+                stomClient.subscribe("/topic/chat", (message) => {
+                    const text = JSON.parse(message.body).content;
+                    console.log(text)
+                    // document.getElementById("response").innerHTML = text;
+                    showMessage(text);
+                })
+            }, 500)
+            enableChatbox(true);
+        }
+
+        function enableChatbox(connected){
+            document.getElementById('connect').disabled = connected;
+            document.getElementById('disconnect').disabled = !connected;
+            if (connected){
+                document.getElementById('conversationDiv').style.visibility = 'visible';
+            }else {
+                document.getElementById('conversationDiv').style.visibility = 'hidden';
+            }
+
+        }
+
+        function showMessage(text){
+            var response = document.getElementById('response');
+            var p = document.createElement('p');
+            p.appendChild(document.createTextNode(text));
+            response.appendChild(p);
+        }
+
+        function send(){
+            var text = document.getElementById('message').value;
+            console.log("Sending.." + text);
+            stomClient.send("/app/message",{}, JSON.stringify({'content': text}));
+        }
+
+    </script>
+</head>
+<body onload="disconnect()">
+    <h2>Welcome to HN Chat Box</h2>
+
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div>
+        <label>Message: </label><input type="text" id="message" />
+        <button id="send" onclick="send();">Send</button>
+        <p id="response"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"
+            integrity="sha512-1QvjE7BtotQjkq8PxLeF6P46gEpBRXuskzIVgjFpekzFVF4yjRgrQvTG1MTOJ3yQgvTteKAcO7DSZI92+u/yZw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"
+            integrity="sha512-tL4PIUsPy+Rks1go4kQG8M8/ItpRMvKnbBjQm4d2DQnFwgcBYRRN00QdyQnWSCwNMsoY/MfJY8nHp2CzlNdtZA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
